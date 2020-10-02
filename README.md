@@ -1,6 +1,6 @@
 # Slack Messaging Action
 
-A GitHub Action for sending (and updating) messages of any format from GitHub Actions to Slack. Inspired by [Slack Notify Build](https://github.com/marketplace/actions/slack-notify-build).
+A GitHub Action for sending (and updating) messages of any layout and formatting from GitHub Actions to Slack. Inspired by [Slack Notify Build](https://github.com/marketplace/actions/slack-notify-build).
 
 A [Slack bot token](https://api.slack.com/docs/token-types) is required to use this action, and the associated app must be granted permission to post in the channel, private group or DM you specify.
 
@@ -14,11 +14,11 @@ with:
   payload: '{"icon_emoji":":rocket:","username":"Deployer","text":"Hello world"}'
 ```
 
-In `payload` you can provide your own [composed message in JSON](https://api.slack.com/messaging/composing) which will be sent to Slack. Make sure you use a quoted JSON string payload as the example above. Also, escaped characters like line-breaks needs to be escaped twice (`\n` becomes `\\n`).
+In `payload` you have to provide your own [rich message layout](https://api.slack.com/messaging/composing/layouts) which will be sent as is to Slack. Make sure you use a quoted JSON string payload as the example above. Also, escaped characters like line-breaks need to be escaped twice (`\n` becomes `\\n`).
 
 ### Updating an existing message
 
-If you need to send multiple Slack build updates and you prefer to update a single message instead of posting multiple messages, you can pass a `message_id` to future steps.
+If you prefer to update a single message instead of posting multiple messages, you can pass a `message_id` to future steps.
 
 Note: You must assign a step `id` to the first Slack notification step in order to reference it for future steps:
 
@@ -35,8 +35,8 @@ Note: You must assign a step `id` to the first Slack notification step in order 
 - name: Deployment
 
 - name: Notify Slack about deployment success
-  if: success() # You can use the conditional checks to determine which build notification to send.
-  uses: voxmedia/github-action-slack-notify-build@v1
+  if: success() # You can use the conditional checks to determine which notification to send.
+  uses: wearerequired/slack-messaging-action@v1
   with:
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     message_id: ${{ steps.slack.outputs.message_id }} # Updates existing message from the first step.
@@ -44,8 +44,8 @@ Note: You must assign a step `id` to the first Slack notification step in order 
     payload: '{"icon_emoji":":rocket:","username":"Deployer","text":"Deployment was successful."}'
 
 - name: Notify Slack about deployment fail
-  if: failure() # You can use the conditional checks to determine which build notification to send.
-  uses: voxmedia/github-action-slack-notify-build@v1
+  if: failure() # You can use the conditional checks to determine which notification to send.
+  uses: wearerequired/slack-messaging-action@v1
   with:
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     message_id: ${{ steps.slack.outputs.message_id }} # Updates existing message from the first step.
@@ -73,7 +73,7 @@ The ID of the channel to post the message to. **Required** if no `channel` is pr
 
 ### `payload`
 
-The [JSON payload of a message](https://api.slack.com/messaging/composing) to send. **Required**  
+The [JSON payload of a message](https://api.slack.com/messaging/composing) to send. **Required**
 
 _Note_: `channel` and `ts` are set to the values of the respective inputs.
 
