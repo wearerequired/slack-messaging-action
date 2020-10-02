@@ -1,0 +1,27 @@
+name: 'Slack Messaging'
+description: 'Send any messages from GitHub Actions to Slack.'
+branding:
+  icon: message-circle
+  color: purple
+inputs:
+  bot_token:
+    description: 'The Slack bot token.'
+    required: true
+  channel:
+    description: 'The Slack channel name. Required if no `channel_id` provided.'
+    required: false
+  channel_id:
+    description: 'The Slack channel ID. Required if no `channel` provided.'
+    required: false
+  payload:
+    description: 'The JSON payload of a message to send. `channel` and `ts` are set to the values of the respective inputs.'
+    required: true
+  message_id:
+    description: 'The ID of the existing Slack message to update.'
+    required: false
+outputs:
+  message_id:
+    description: 'The unique timestamp identifier of the Slack message sent.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
