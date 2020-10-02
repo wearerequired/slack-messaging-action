@@ -59,6 +59,8 @@ Note: You must assign a step `id` to the first Slack notification step in order 
 
 A [bot token](https://api.slack.com/docs/token-types) associated with a Slack app. **Required**
 
+_Note_: The following bot token scopes are required: `chat:write`, `chat:write.customize`, `chat:write.public`, `channels:read`, and `groups:read`.
+
 ### `channel`
 
 The name of the channel to post the message to. **Required** if no `channel_id` is provided.
