@@ -11,10 +11,32 @@ uses: wearerequired/slack-messaging-action@v1
 with:
   bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
   channel: deployments
-  payload: '{"icon_emoji":":rocket:","username":"Deployer","text":"Hello world"}'
+  payload: >-
+    {
+        "icon_emoji": ":rocket:",
+        "username": "Deployer",
+        "attachments": [
+            {
+                "author_name": "${{ github.event.sender.login }}",
+                "author_link": "${{ github.event.sender.html_url }}",
+                "author_icon": "${{ github.event.sender.avatar_url }}",
+                "color": "good",
+                "fallback": "Deployment finished.",
+                "pretext": "Deployment finished.",
+                "fields": [
+                    {
+                      "title": "Revision",
+                      "value": "<https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}@${{ github.ref }}>",
+                      "short": true
+                    }
+                ],
+                "footer": "<https://github.com/${{ github.repository }}|${{ github.repository }}>",
+            }
+        ]
+    }
 ```
 
-In `payload` you have to provide your own [rich message layout](https://api.slack.com/messaging/composing/layouts) which will be sent as is to Slack. Make sure you use a quoted JSON string payload as the example above. Also, escaped characters like line-breaks need to be escaped twice (`\n` becomes `\\n`).
+In `payload` you have to provide your own [rich message layout](https://api.slack.com/messaging/composing/layouts) which will be sent as is to Slack.
 
 ### Updating an existing message
 
@@ -30,7 +52,12 @@ Note: You must assign a step `id` to the first Slack notification step in order 
   with:
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     channel: deployments
-    payload: '{"icon_emoji":":rocket:","username":"Deployer","text":"Deployment in process..."}'
+    payload: >-
+      {
+          "icon_emoji": ":rocket:",
+          "username": "Deployer",
+          "text": "Deployment started."
+      }
 
 - name: Deployment
 
@@ -41,7 +68,12 @@ Note: You must assign a step `id` to the first Slack notification step in order 
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     message_id: ${{ steps.slack.outputs.message_id }} # Updates existing message from the first step.
     channel: deployments
-    payload: '{"icon_emoji":":rocket:","username":"Deployer","text":"Deployment was successful."}'
+    payload: >-
+      {
+          "icon_emoji": ":rocket:",
+          "username": "Deployer",
+          "text": "Deployment finished."
+      }
 
 - name: Notify Slack about deployment fail
   if: failure() # You can use the conditional checks to determine which notification to send.
@@ -50,7 +82,12 @@ Note: You must assign a step `id` to the first Slack notification step in order 
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     message_id: ${{ steps.slack.outputs.message_id }} # Updates existing message from the first step.
     channel: deployments
-    payload: '{"icon_emoji":":rocket:","username":"Deployer","text":"Deployment has failed."}'
+    payload: >-
+      {
+          "icon_emoji": ":boom:",
+          "username": "Deployer",
+          "text": "Deployment failed."
+      }
 ```
 
 ## Inputs
