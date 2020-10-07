@@ -1,0 +1,15 @@
+name: Keep the versions up-to-date
+
+on:
+  release:
+    types: [published, edited]
+
+jobs:
+  actions-tagger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Actions-R-Us/actions-tagger@v2.0.1
+        with:
+          publish_latest_tag: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
