@@ -131,3 +131,7 @@ Returns the unique message ID, which is a timestamp which can be passed to futur
 ## License
 
 The scripts and documentation in this project are released under the [MIT license](LICENSE).
+
+<br>
+
+[![a required open source product - let's get in touch](https://media.required.com/images/open-source-banner.png)](https://required.com/en/lets-get-in-touch/)
