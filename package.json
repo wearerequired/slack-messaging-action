@@ -18,6 +18,6 @@
     "@vercel/ncc": "0.24.1",
     "@wearerequired/eslint-config": "1.5.1",
     "@wordpress/eslint-plugin": "7.3.0",
-    "eslint": "7.11.0"
+    "eslint": "7.13.0"
   }
 }
