@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
-    "@babel/preset-env": "7.12.1",
+    "@babel/preset-env": "7.12.7",
     "@vercel/ncc": "0.25.1",
     "@wearerequired/eslint-config": "1.5.1",
     "@wordpress/eslint-plugin": "7.3.0",
