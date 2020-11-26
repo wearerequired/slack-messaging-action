@@ -6,7 +6,7 @@ module.exports =
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"_from\":\"@slack/web-api@5.13.0\",\"_id\":\"@slack/web-api@5.13.0\",\"_inBundle\":false,\"_integrity\":\"sha512-xT27bhYvkjidKCmGt3Dy4tx12Hk4oI9G/6vQFUdDXV1WSk50tysswHe67ckgcSU95yRPcnLVQicVpM3cAH6/AA==\",\"_location\":\"/@slack/web-api\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"@slack/web-api@5.13.0\",\"name\":\"@slack/web-api\",\"escapedName\":\"@slack%2fweb-api\",\"scope\":\"@slack\",\"rawSpec\":\"5.13.0\",\"saveSpec\":null,\"fetchSpec\":\"5.13.0\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/@slack/web-api/-/web-api-5.13.0.tgz\",\"_shasum\":\"44b3c744f8f2c75b188a928c1dcb51024ac8d4d4\",\"_spec\":\"@slack/web-api@5.13.0\",\"_where\":\"/home/runner/work/slack-messaging-action/slack-messaging-action\",\"author\":{\"name\":\"Slack Technologies, Inc.\"},\"bugs\":{\"url\":\"https://github.com/slackapi/node-slack-sdk/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"@slack/logger\":\">=1.0.0 <3.0.0\",\"@slack/types\":\"^1.7.0\",\"@types/is-stream\":\"^1.1.0\",\"@types/node\":\">=8.9.0\",\"axios\":\"^0.19.0\",\"eventemitter3\":\"^3.1.0\",\"form-data\":\"^2.5.0\",\"is-stream\":\"^1.1.0\",\"p-queue\":\"^6.6.1\",\"p-retry\":\"^4.0.0\"},\"deprecated\":false,\"description\":\"Official library for using the Slack Platform's Web API\",\"devDependencies\":{\"@aoberoi/capture-console\":\"^1.1.0\",\"@microsoft/api-extractor\":\"^7.3.4\",\"@types/chai\":\"^4.1.7\",\"@types/mocha\":\"^5.2.6\",\"busboy\":\"^0.3.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.2.0\",\"mocha\":\"^6.0.2\",\"nock\":\"^10.0.6\",\"nyc\":\"^14.1.1\",\"shelljs\":\"^0.8.3\",\"shx\":\"^0.3.2\",\"sinon\":\"^7.2.7\",\"source-map-support\":\"^0.5.10\",\"ts-node\":\"^8.0.3\",\"tsd\":\"^0.13.1\",\"tslint\":\"^5.13.1\",\"tslint-config-airbnb\":\"^5.11.1\",\"typescript\":\"^3.3.3333\"},\"engines\":{\"node\":\">= 8.9.0\",\"npm\":\">= 5.5.1\"},\"files\":[\"dist/**/*\"],\"homepage\":\"https://slack.dev/node-slack-sdk/web-api\",\"keywords\":[\"slack\",\"web-api\",\"bot\",\"client\",\"http\",\"api\",\"proxy\",\"rate-limiting\",\"pagination\"],\"license\":\"MIT\",\"main\":\"dist/index.js\",\"name\":\"@slack/web-api\",\"publishConfig\":{\"access\":\"public\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/slackapi/node-slack-sdk.git\"},\"scripts\":{\"build\":\"npm run build:clean && tsc\",\"build:clean\":\"shx rm -rf ./dist ./coverage ./.nyc_output\",\"coverage\":\"codecov -F webapi --root=$PWD\",\"lint\":\"tslint --project .\",\"prepare\":\"npm run build\",\"ref-docs:model\":\"api-extractor run\",\"test\":\"npm run build && npm run test:mocha && npm run test:types\",\"test:mocha\":\"nyc mocha --config .mocharc.json src/*.spec.js\",\"test:types\":\"tsd\",\"watch\":\"npx nodemon --watch 'src' --ext 'ts' --exec npm run build\"},\"tsd\":{\"directory\":\"test/types\"},\"types\":\"./dist/index.d.ts\",\"version\":\"5.13.0\"}");
+module.exports = JSON.parse("{\"_from\":\"@slack/web-api@5.14.0\",\"_id\":\"@slack/web-api@5.14.0\",\"_inBundle\":false,\"_integrity\":\"sha512-Kvwb1Xnj4Wbe0aMkHNek3AGm+IINFuU0LzCIm5/sM2wN67SuituXF2OEkHNwM5OsRVXizNLIEPD2dADK82IXqw==\",\"_location\":\"/@slack/web-api\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"@slack/web-api@5.14.0\",\"name\":\"@slack/web-api\",\"escapedName\":\"@slack%2fweb-api\",\"scope\":\"@slack\",\"rawSpec\":\"5.14.0\",\"saveSpec\":null,\"fetchSpec\":\"5.14.0\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/@slack/web-api/-/web-api-5.14.0.tgz\",\"_shasum\":\"3c282670f4a5a1d0842b3e1787b46313a3da5d9d\",\"_spec\":\"@slack/web-api@5.14.0\",\"_where\":\"/home/runner/work/slack-messaging-action/slack-messaging-action\",\"author\":{\"name\":\"Slack Technologies, Inc.\"},\"bugs\":{\"url\":\"https://github.com/slackapi/node-slack-sdk/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"@slack/logger\":\">=1.0.0 <3.0.0\",\"@slack/types\":\"^1.7.0\",\"@types/is-stream\":\"^1.1.0\",\"@types/node\":\">=8.9.0\",\"axios\":\"^0.19.0\",\"eventemitter3\":\"^3.1.0\",\"form-data\":\"^2.5.0\",\"is-stream\":\"^1.1.0\",\"p-queue\":\"^6.6.1\",\"p-retry\":\"^4.0.0\"},\"deprecated\":false,\"description\":\"Official library for using the Slack Platform's Web API\",\"devDependencies\":{\"@aoberoi/capture-console\":\"^1.1.0\",\"@microsoft/api-extractor\":\"^7.3.4\",\"@types/chai\":\"^4.1.7\",\"@types/mocha\":\"^5.2.6\",\"busboy\":\"^0.3.0\",\"chai\":\"^4.2.0\",\"codecov\":\"^3.2.0\",\"mocha\":\"^6.0.2\",\"nock\":\"^10.0.6\",\"nyc\":\"^14.1.1\",\"shelljs\":\"^0.8.3\",\"shx\":\"^0.3.2\",\"sinon\":\"^7.2.7\",\"source-map-support\":\"^0.5.10\",\"ts-node\":\"^8.0.3\",\"tsd\":\"^0.13.1\",\"tslint\":\"^5.13.1\",\"tslint-config-airbnb\":\"^5.11.1\",\"typescript\":\"^3.3.3333\"},\"engines\":{\"node\":\">= 8.9.0\",\"npm\":\">= 5.5.1\"},\"files\":[\"dist/**/*\"],\"homepage\":\"https://slack.dev/node-slack-sdk/web-api\",\"keywords\":[\"slack\",\"web-api\",\"bot\",\"client\",\"http\",\"api\",\"proxy\",\"rate-limiting\",\"pagination\"],\"license\":\"MIT\",\"main\":\"dist/index.js\",\"name\":\"@slack/web-api\",\"publishConfig\":{\"access\":\"public\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/slackapi/node-slack-sdk.git\"},\"scripts\":{\"build\":\"npm run build:clean && tsc\",\"build:clean\":\"shx rm -rf ./dist ./coverage ./.nyc_output\",\"coverage\":\"codecov -F webapi --root=$PWD\",\"lint\":\"tslint --project .\",\"prepare\":\"npm run build\",\"ref-docs:model\":\"api-extractor run\",\"test\":\"npm run build && npm run test:mocha && npm run test:types\",\"test:mocha\":\"nyc mocha --config .mocharc.json src/*.spec.js\",\"test:types\":\"tsd\",\"watch\":\"npx nodemon --watch 'src' --ext 'ts' --exec npm run build\"},\"tsd\":{\"directory\":\"test/types\"},\"types\":\"./dist/index.d.ts\",\"version\":\"5.14.0\"}");
 
 /***/ }),
 
@@ -656,7 +656,7 @@ class WebClient extends methods_1.Methods {
     /**
      * @param token - An API token to authenticate/authorize with Slack (usually start with `xoxp`, `xoxb`)
      */
-    constructor(token, { slackApiUrl = 'https://slack.com/api/', logger = undefined, logLevel = logger_1.LogLevel.INFO, maxRequestConcurrency = 3, retryConfig = retry_policies_1.default.tenRetriesInAboutThirtyMinutes, agent = undefined, tls = undefined, rejectRateLimitedCalls = false, headers = {}, } = {}) {
+    constructor(token, { slackApiUrl = 'https://slack.com/api/', logger = undefined, logLevel = logger_1.LogLevel.INFO, maxRequestConcurrency = 3, retryConfig = retry_policies_1.default.tenRetriesInAboutThirtyMinutes, agent = undefined, tls = undefined, rejectRateLimitedCalls = false, headers = {}, teamId = undefined, } = {}) {
         super();
         this.token = token;
         this.slackApiUrl = slackApiUrl;
@@ -665,6 +665,7 @@ class WebClient extends methods_1.Methods {
         // NOTE: may want to filter the keys to only those acceptable for TLS options
         this.tlsConfig = tls !== undefined ? tls : {};
         this.rejectRateLimitedCalls = rejectRateLimitedCalls;
+        this.teamId = teamId;
         // Logging
         if (typeof logger !== 'undefined') {
             this.logger = logger;
@@ -707,7 +708,10 @@ class WebClient extends methods_1.Methods {
         if (typeof options === 'string' || typeof options === 'number' || typeof options === 'boolean') {
             throw new TypeError(`Expected an options argument but instead received a ${typeof options}`);
         }
-        const response = await this.makeRequest(method, Object.assign({ token: this.token }, options));
+        const response = await this.makeRequest(method, Object.assign({
+            token: this.token,
+            team_id: this.teamId,
+        }, options));
         const result = this.buildResult(response);
         // log warnings in response metadata
         if (result.response_metadata !== undefined && result.response_metadata.warnings !== undefined) {
@@ -1388,6 +1392,7 @@ class Methods extends eventemitter3_1.EventEmitter {
                 list: bindApiCall(this, 'admin.users.list'),
                 remove: bindApiCall(this, 'admin.users.remove'),
                 session: {
+                    list: bindApiCall(this, 'admin.users.session.list'),
                     reset: bindApiCall(this, 'admin.users.session.reset'),
                     invalidate: bindApiCall(this, 'admin.users.session.invalidate'),
                 },
@@ -1654,6 +1659,7 @@ exports.cursorPaginationEnabledMethods.add('admin.teams.admins.list');
 exports.cursorPaginationEnabledMethods.add('admin.teams.list');
 exports.cursorPaginationEnabledMethods.add('admin.teams.owners.list');
 exports.cursorPaginationEnabledMethods.add('admin.users.list');
+exports.cursorPaginationEnabledMethods.add('admin.users.session.list');
 exports.cursorPaginationEnabledMethods.add('apps.event.authorizations.list');
 exports.cursorPaginationEnabledMethods.add('channels.list');
 exports.cursorPaginationEnabledMethods.add('chat.scheduledMessages.list');
