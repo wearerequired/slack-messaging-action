@@ -39,7 +39,7 @@ jobs:
       - name: Commit dist
         uses: EndBug/add-and-commit@v6.2.0
         with:
-          add: 'dist'
-          message: '[auto] Update dist'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          add: "dist"
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "[auto] Update compiled version"
