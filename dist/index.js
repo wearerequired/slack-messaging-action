@@ -5751,14 +5751,19 @@ if (true) {
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var debug;
-try {
-  /* eslint global-require: off */
-  debug = __nccwpck_require__(8237)("follow-redirects");
-}
-catch (error) {
-  debug = function () { /* */ };
-}
-module.exports = debug;
+
+module.exports = function () {
+  if (!debug) {
+    try {
+      /* eslint global-require: off */
+      debug = __nccwpck_require__(8237)("follow-redirects");
+    }
+    catch (error) {
+      debug = function () { /* */ };
+    }
+  }
+  debug.apply(null, arguments);
+};
 
 
 /***/ }),
@@ -7986,7 +7991,7 @@ const pRetry = (input, options) => new Promise((resolve, reject) => {
 			if (error instanceof AbortError) {
 				operation.stop();
 				reject(error.originalError);
-			} else if (error instanceof TypeError) {
+			} else if (error instanceof TypeError && error.message !== 'Failed to fetch') {
 				operation.stop();
 				reject(error);
 			} else {
