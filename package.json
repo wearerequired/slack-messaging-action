@@ -13,7 +13,7 @@
     "@slack/web-api": "6.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.12.16",
+    "@babel/core": "7.12.17",
     "@babel/preset-env": "7.12.16",
     "@vercel/ncc": "0.27.0",
     "@wearerequired/eslint-config": "1.6.0",
