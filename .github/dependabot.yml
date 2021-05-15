@@ -3,18 +3,16 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "10:00"
+      interval: "weekly"
+      day: "friday"
+      time: "06:00"
       timezone: "Europe/Zurich"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "ocean90"
+    open-pull-requests-limit: 3
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "10:00"
+      interval: "weekly"
+      day: "friday"
+      time: "06:00"
       timezone: "Europe/Zurich"
-    open-pull-requests-limit: 10
-    reviewers:
-      - "ocean90"
+    open-pull-requests-limit: 3
