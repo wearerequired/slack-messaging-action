@@ -17,7 +17,7 @@
     "@babel/preset-env": "7.14.2",
     "@vercel/ncc": "0.28.6",
     "@wearerequired/eslint-config": "2.1.0",
-    "@wordpress/eslint-plugin": "9.0.5",
+    "@wordpress/eslint-plugin": "9.0.6",
     "eslint": "7.27.0"
   }
 }
