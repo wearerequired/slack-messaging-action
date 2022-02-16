@@ -3,16 +3,14 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "friday"
+      interval: "monthly"
       time: "06:00"
       timezone: "Europe/Zurich"
     open-pull-requests-limit: 3
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "friday"
+      interval: "monthly"
       time: "06:00"
       timezone: "Europe/Zurich"
     open-pull-requests-limit: 3
