@@ -9,7 +9,7 @@
   "author": "required gmbh",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "1.3.0",
+    "@actions/core": "1.6.0",
     "@slack/web-api": "6.3.0"
   },
   "devDependencies": {
