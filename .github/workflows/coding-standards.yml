@@ -13,32 +13,26 @@ jobs:
     steps:
       - name: Check out repository (push)
         if: ${{ github.event_name == 'push' }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Check out repository (pull_request_target)
         if: ${{ github.event_name == 'pull_request_target' }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
-
-      - name: Cache Node.js dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: 'package.json'
 
       - name: Install Node.js dependencies
         run: npm i
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: wearerequired/lint-action@v2
         with:
           continue_on_error: false
           eslint: true
