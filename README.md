@@ -7,7 +7,7 @@ A [Slack bot token](https://api.slack.com/docs/token-types) is required to use t
 ## Usage
 
 ```yaml
-uses: wearerequired/slack-messaging-action@v1
+uses: wearerequired/slack-messaging-action@v2
 with:
   bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
   channel: deployments
@@ -48,7 +48,7 @@ Note: You must assign a step `id` to the first Slack notification step in order 
 - name: Notify Slack about deployment start
   if: success()
   id: slack # IMPORTANT: Reference this step ID value in future Slack steps.
-  uses: wearerequired/slack-messaging-action@v1
+  uses: wearerequired/slack-messaging-action@v2
   with:
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     channel: deployments
@@ -63,7 +63,7 @@ Note: You must assign a step `id` to the first Slack notification step in order 
 
 - name: Notify Slack about deployment success
   if: success() # You can use the conditional checks to determine which notification to send.
-  uses: wearerequired/slack-messaging-action@v1
+  uses: wearerequired/slack-messaging-action@v2
   with:
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     message_id: ${{ steps.slack.outputs.message_id }} # Updates existing message from the first step.
@@ -77,7 +77,7 @@ Note: You must assign a step `id` to the first Slack notification step in order 
 
 - name: Notify Slack about deployment fail
   if: failure() # You can use the conditional checks to determine which notification to send.
-  uses: wearerequired/slack-messaging-action@v1
+  uses: wearerequired/slack-messaging-action@v2
   with:
     bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
     message_id: ${{ steps.slack.outputs.message_id }} # Updates existing message from the first step.
