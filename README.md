@@ -15,14 +15,13 @@ with:
     {
         "icon_emoji": ":rocket:",
         "username": "Deployer",
+        "text": "Deployment finished.",
         "attachments": [
             {
                 "author_name": "${{ github.event.sender.login }}",
                 "author_link": "${{ github.event.sender.html_url }}",
                 "author_icon": "${{ github.event.sender.avatar_url }}",
                 "color": "good",
-                "fallback": "Deployment finished.",
-                "pretext": "Deployment finished.",
                 "fields": [
                     {
                       "title": "Revision",
