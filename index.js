@@ -1,5 +1,5 @@
-const core = require( '@actions/core' );
-const { WebClient } = require( '@slack/web-api' );
+import * as core from '@actions/core';
+import { WebClient } from '@slack/web-api';
 
 ( async () => {
 	try {
