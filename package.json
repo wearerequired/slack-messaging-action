@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "3.0.1",
-    "@slack/web-api": "8.1.1"
+    "@slack/web-api": "8.2.0"
   },
   "devDependencies": {
     "@vercel/ncc": "0.45.0",
