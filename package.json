@@ -22,7 +22,7 @@
     "@vercel/ncc": "0.45.0",
     "@wearerequired/eslint-config": "7.0.0",
     "@wordpress/eslint-plugin": "25.10.0",
-    "eslint": "10.11.0",
+    "eslint": "10.13.0",
     "prettier": "npm:wp-prettier@3.9.6"
   }
 }
